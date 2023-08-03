@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.luogu.com.cn/upload/usericon/561714.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.luogu.com.cn/upload/usericon/561714.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.luogu.com.cn/upload/usericon/561714.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://cdn.luogu.com.cn/upload/usericon/561714.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSP-S," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSP-S 模拟赛 #01 比赛报告1 概况比赛情况：    场次 分数 排名 A B C D    23.07.17 155 #3 $\color{yellow}{20}$ $\color{green}{100}$ $\color{red}{0}$ $\color{yellow}{35}$   知识点 &#x2F; 补题情况：（绿色为已补，红色为尝试补）    A B C D    $\colo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSP-S 模拟赛 01 比赛报告">
+<meta property="og:url" content="https://yh2021shx.github.com/2023/07/17/[23.07.17]CSPS01/index.html">
+<meta property="og:site_name" content="yh2021shx&#39;s blog">
+<meta property="og:description" content="CSP-S 模拟赛 #01 比赛报告1 概况比赛情况：    场次 分数 排名 A B C D    23.07.17 155 #3 $\color{yellow}{20}$ $\color{green}{100}$ $\color{red}{0}$ $\color{yellow}{35}$   知识点 &#x2F; 补题情况：（绿色为已补，红色为尝试补）    A B C D    $\colo">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-07-17T15:19:32.131Z">
+<meta property="article:modified_time" content="2023-07-18T02:17:49.549Z">
+<meta property="article:author" content="yh2021shx">
+<meta property="article:tag" content="CSP-S">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yh2021shx.github.com/2023/07/17/[23.07.17]CSPS01/"/>
+
+
+
+
+
+  <title>CSP-S 模拟赛 01 比赛报告 | yh2021shx's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">yh2021shx's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">喵喵的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yh2021shx.github.com/2023/07/17/%5B23.07.17%5DCSPS01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/usericon/561714.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yh2021shx's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSP-S 模拟赛 01 比赛报告</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-17T23:19:32+08:00">
+                2023-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Contest/" itemprop="url" rel="index">
+                    <span itemprop="name">Contest</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSP-S-模拟赛-01-比赛报告"><a href="#CSP-S-模拟赛-01-比赛报告" class="headerlink" title="CSP-S 模拟赛 #01 比赛报告"></a>CSP-S 模拟赛 #01 比赛报告</h1><h2 id="1-概况"><a href="#1-概况" class="headerlink" title="1 概况"></a>1 概况</h2><p>比赛情况：</p>
+<table>
+<thead>
+<tr>
+<th align="center">场次</th>
+<th align="center">分数</th>
+<th align="center">排名</th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">23.07.17</td>
+<td align="center">155</td>
+<td align="center">#3</td>
+<td align="center">$\color{yellow}{20}$</td>
+<td align="center">$\color{green}{100}$</td>
+<td align="center">$\color{red}{0}$</td>
+<td align="center">$\color{yellow}{35}$</td>
+</tr>
+</tbody></table>
+<p>知识点 &#x2F; 补题情况：（绿色为已补，红色为尝试补）</p>
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\color{green}{\text{组合+性质}}$</td>
+<td align="center">$\color{green}{\text{拆点最短路}}$</td>
+<td align="center">$\color{red}{\text{图论}}$</td>
+<td align="center">$\color{red}{\text{博弈论+分讨}}$</td>
+</tr>
+</tbody></table>
+<h2 id="2-比赛过程"><a href="#2-比赛过程" class="headerlink" title="2 比赛过程"></a>2 比赛过程</h2><p>先通读一遍，觉得 A 和 C 可做。先做 A，对着式子推很久没推出来 $\mathcal{O}(n\log{n})$，决定先开 B。迭代了一下发现有周期，用拆点最短路快速写完看 C。一直不会 Subtask 2，决定先写暴力，样例过了。开 D，快速写完一个四维 dp，用暴力跑了几个 Subtask 4，找到规律了写上。本来以为这个能过 Subtask 3，但是因为 $T \leq 50$ 没过。写了 B 的对拍，很对，于是最后全力冲 A 失败了。</p>
+<p>赛后发现 C 写挂了，调了一会暴力然后润了。</p>
+<span id="more"></span>
+
+<h2 id="3-解题报告"><a href="#3-解题报告" class="headerlink" title="3 解题报告"></a>3 解题报告</h2><h3 id="Problem-A"><a href="#Problem-A" class="headerlink" title="Problem A."></a>Problem A.</h3><h3 id="情况"><a href="#情况" class="headerlink" title="情况"></a>情况</h3><table>
+<thead>
+<tr>
+<th align="center">赛时</th>
+<th align="center">赛后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\color{yellow}{20}$</td>
+<td align="center">$\color{green}{100}$</td>
+</tr>
+</tbody></table>
+<h4 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h4><p>对于所有 $j(1 \leq j \leq m)$，求出 $\sum_i^n\binom{j}{a_i}$。</p>
+<h4 id="解法分析"><a href="#解法分析" class="headerlink" title="解法分析"></a>解法分析</h4><p>通过 $\sum_i^na_i \leq 10^5$，我们得知不同 $a_i$ 的取值个数 $\leq \sqrt{10^5}$。这个东西以前从来没有接触过。做不出来情有可原。</p>
+<p>所以我们可以把相同的 $a_i$ 拿到一起计算，直观时间复杂度为 $\mathcal{O}{(n\sqrt{10^5}\log{n})}$，但可以证明为 $\mathcal{O}(n\sqrt{10^5})$。</p>
+<p><strong>需要注意的是阶乘的逆元需要预处理，否则会被卡。</strong></p>
+<h3 id="Problem-B"><a href="#Problem-B" class="headerlink" title="Problem B."></a>Problem B.</h3><h4 id="情况-1"><a href="#情况-1" class="headerlink" title="情况"></a>情况</h4><table>
+<thead>
+<tr>
+<th align="center">赛时</th>
+<th align="center">赛后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\color{green}{100}$</td>
+<td align="center">$\color{green}{100}$</td>
+</tr>
+</tbody></table>
+<h4 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>给定一个图，每走一步后图的每一条边的权值 $w$ 会变成 $\frac{1+x}{1-x}\bmod p$，问从 $1$ 到 $n$ 的最短路。</p>
+<h4 id="解法分析-1"><a href="#解法分析-1" class="headerlink" title="解法分析"></a>解法分析</h4><p>简单手玩一下这个式子，发现迭代两次后 $w \rightarrow -w \bmod p$。所以发现这个函数周期为 $4$，老套路拆点最短路即可。</p>
+<h3 id="Problem-C"><a href="#Problem-C" class="headerlink" title="Problem C."></a>Problem C.</h3><h4 id="情况-2"><a href="#情况-2" class="headerlink" title="情况"></a>情况</h4><table>
+<thead>
+<tr>
+<th align="center">赛时</th>
+<th align="center">赛后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\color{red}{0}$</td>
+<td align="center">$\color{yellow}{20}$</td>
+</tr>
+</tbody></table>
+<h4 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意"></a>题目大意</h4><p>给定一颗树和一个 $k$，会执行 $k$ 次操作，每次操作会把原来的树复制到新树的叶子结点上，然后给定 $q$ 次询问，求出 dfn 为 $x, y$ 的两点的最短路。</p>
+<h4 id="解法分析-2"><a href="#解法分析-2" class="headerlink" title="解法分析"></a>解法分析</h4><p>首先 $k &#x3D; 0$ 显然暴力 lca。</p>
+<p>然后对于 $k \leq 30$，容易想到把原树缩成点，我们就可以在 $\mathcal{O}(1)$ 的时间内计算出一棵树的根的子树大小。若每次要定位一个 dfn 为 $x$ 的子树，可以从 $1$ 开始往原树叶子结点跳，二分跳到哪个叶子结点即可。这样可以 $\mathcal{O}(k\log{n})$ 定位。最后我们可以通过类似倍增 lca 的方法，先让两个点深度相同再一起往上跳，跳到同一颗子树再来一遍普通 lca 即可。复杂度 $\mathcal{O}(k + \log{n})$。</p>
+<p>对于 $k \leq 10^9$，容易发现大部分点都是没用的。排除冗余后只有左下角 30 层和根节点到左下角的一条链是有用的。预处理出这些结点然后套 $k \leq 30$ 即可。</p>
+<h3 id="Problem-D"><a href="#Problem-D" class="headerlink" title="Problem D."></a>Problem D.</h3><h4 id="情况-3"><a href="#情况-3" class="headerlink" title="情况"></a>情况</h4><table>
+<thead>
+<tr>
+<th align="center">赛时</th>
+<th align="center">赛后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$\color{yellow}{35}$</td>
+<td align="center">$\color{yellow}{35}$</td>
+</tr>
+</tbody></table>
+<h4 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意"></a>题目大意</h4><p>给定 $n$ 堆石子，两个人轮流取，每次可以取出开头和结尾的石子堆中若干个式子，谁不能取就输，问先手是否有必胜策略。</p>
+<h4 id="解法分析-3"><a href="#解法分析-3" class="headerlink" title="解法分析"></a>解法分析</h4><p>题解没看懂 QAQ。</p>
+<p>把我会的写出来吧。</p>
+<p>首先可以定义 $l_{l,r}$ 表示唯一的 $x$ 使得 ${x, a_{l+1}, \cdots, a_r}$ 时先手必败，$r_{l,r}$ 恰好相反。</p>
+<p>先证明为何唯一。若存在 $x &lt; y$ 满足先手必败，则当左边石子堆有 $y$ 个时，先手可以取 $y - x$ 个，则后手必败，矛盾。</p>
+<p>然后就考虑 $l_{l,r}$ 的递推，$r_{l,r}$ 同理，不叙述。</p>
+<p>设 $x &#x3D; a_r$，则开始分讨：</p>
+<ul>
+<li>$r_{l,r} &#x3D; x$</li>
+</ul>
+<p>显然 $l_{l-1,r} &#x3D; 0$。</p>
+<ul>
+<li>$x &lt; l_{l - 1, r - 1}, x &lt; r_{l,r}$</li>
+</ul>
+<p>若 $l_{l-1,r} &#x3D; x$，则后手可以走对称操作，这样一定会有先手操作完后，首尾有一堆石子被取完。又有 $x &lt; l_{l - 1,r - 1}, x &lt; r_{l, r}$，则后手必胜，先手必输。故 $l_{l - 1, r} &#x3D; x$</p>
+<ul>
+<li>$l_{l - 1, r - 1} &gt; r_{l, r}, r_{l,r} &lt; x \leq l_{l - 1, r - 1}$</li>
+</ul>
+<p>不会 TAT。</p>
+<ul>
+<li>$l_{l - 1, r - 1} &lt; r_{l, r}, l_{l - 1,r - 1} \leq x &lt; r_{l, r}$</li>
+</ul>
+<p>也不会 QwQ。</p>
+<ul>
+<li>$x &gt; l_{l - 1, r - 1}, x &gt; r_{l, r}$</li>
+</ul>
+<p>没想 &#x3D;。&#x3D;</p>
+<h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4 总结"></a>4 总结</h2><ol>
+<li>时间复杂度没考虑清楚，导致 D 题挂分</li>
+<li>误判 B 为神仙题，导致死磕 A</li>
+<li>没及时检查，导致 C 挂大分</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSP-S/" rel="tag"># CSP-S</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/07/03/ARC163C/" rel="next" title="ARC163 C 题题解">
+                <i class="fa fa-chevron-left"></i> ARC163 C 题题解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+  
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://cdn.luogu.com.cn/upload/usericon/561714.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSP-S-%E6%A8%A1%E6%8B%9F%E8%B5%9B-01-%E6%AF%94%E8%B5%9B%E6%8A%A5%E5%91%8A"><span class="nav-number">1.</span> <span class="nav-text">CSP-S 模拟赛 #01 比赛报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%A6%82%E5%86%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1 概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%AF%94%E8%B5%9B%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2 比赛过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A"><span class="nav-number">1.3.</span> <span class="nav-text">3 解题报告</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-A"><span class="nav-number">1.3.1.</span> <span class="nav-text">Problem A.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E5%86%B5"><span class="nav-number">1.3.2.</span> <span class="nav-text">情况</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">解法分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-B"><span class="nav-number">1.3.3.</span> <span class="nav-text">Problem B.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%83%85%E5%86%B5-1"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-1"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90-1"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">解法分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-C"><span class="nav-number">1.3.4.</span> <span class="nav-text">Problem C.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%83%85%E5%86%B5-2"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-2"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90-2"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">解法分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-D"><span class="nav-number">1.3.5.</span> <span class="nav-text">Problem D.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%83%85%E5%86%B5-3"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-3"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90-3"><span class="nav-number">1.3.5.3.</span> <span class="nav-text">解法分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">4 总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yh2021shx</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'b3308db46a55496c076c',
+      clientSecret: '1675737afb2537225c142b731ec0de8a53345fd6',
+      repo: 'yh2021shx.github.io',
+      owner: 'yh2021shx',
+      admin: ['yh2021shx'],
+      id: location.pathname,
+      distractionFreeMode: 'false'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
