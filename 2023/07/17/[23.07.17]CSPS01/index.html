@@ -87,7 +87,7 @@
 <meta property="og:description" content="CSP-S 模拟赛 #01 比赛报告1 概况比赛情况：    场次 分数 排名 A B C D    23.07.17 155 #3 $\color{yellow}{20}$ $\color{green}{100}$ $\color{red}{0}$ $\color{yellow}{35}$   知识点 &#x2F; 补题情况：（绿色为已补，红色为尝试补）    A B C D    $\colo">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-07-17T15:19:32.131Z">
-<meta property="article:modified_time" content="2023-07-18T02:17:49.549Z">
+<meta property="article:modified_time" content="2023-08-07T04:13:25.659Z">
 <meta property="article:author" content="yh2021shx">
 <meta property="article:tag" content="CSP-S">
 <meta name="twitter:card" content="summary">
@@ -338,16 +338,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2023/07/17/%5B23.07.17%5DCSPS01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2023/07/17/%5B23.07.17%5DCSPS01/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -506,7 +496,9 @@
 <li>误判 B 为神仙题，导致死磕 A</li>
 <li>没及时检查，导致 C 挂大分</li>
 </ol>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
       
     </div>
     
@@ -574,16 +566,8 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
 
   
-
-  
-
 
         </div>
         
@@ -874,51 +858,26 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-      <style>
-        a.gitment-editor-footer-tip { display: none; }
-        .gitment-container.gitment-footer-container { display: none; }
-      </style>
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname, 
-            owner: 'yh2021shx',
-            repo: 'gitalk-comments',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '03f1967d0069a257ceb12a03abdcaabae32a7eb9',
-            
-                client_id: '05de251a18c7fe679ec0'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'b3308db46a55496c076c',
+      clientSecret: '1675737afb2537225c142b731ec0de8a53345fd6',
+      repo: 'yh2021shx.github.io',
+      owner: 'yh2021shx',
+      admin: ['yh2021shx'],
+      id: location.pathname,
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
 
 
   
