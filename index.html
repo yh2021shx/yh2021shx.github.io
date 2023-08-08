@@ -281,6 +281,375 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yh2021shx.github.com/2023/08/08/%E4%BA%8C%E5%8D%81%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/usericon/561714.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yh2021shx's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/08/08/%E4%BA%8C%E5%8D%81%E4%B8%89/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-08T22:03:22+08:00">
+                2023-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="text-twentythree"><a href="#text-twentythree" class="headerlink" title="$\text{twentythree}$"></a>$\text{twentythree}$</h2><p>使最后所有数相等，不难想到差分，那么操作就变成：</p>
+<p>$$<br>\begin{cases}<br>(0, 1) \rightarrow (1, 0)\<br>(1, 1) \rightarrow (2, 0)\<br>(2, 1) \rightarrow (0, 0)\<br>\end{cases}<br>$$</p>
+<p>在环上进行差分，最终差分数组全为 $0$，显然只能第三种操作才可行。观察发现第一种操作可以把 $1$ 在 $0$ 中随意移动。那么不妨将 $1$ 不断往左边移动，遇到 $1$ 便可以直接变成 $(2,0)$，遇到 $2$ 就可以全部变成 $0$。可以用栈处理。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yh2021shx.github.com/2023/08/08/%5BAT_abc313_d%5D%20Odd%20or%20Even/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/usericon/561714.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yh2021shx's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/08/08/%5BAT_abc313_d%5D%20Odd%20or%20Even/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-08T22:02:52+08:00">
+                2023-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>简单题，但是为什么赛场上 WA 了呢？</p>
+<p>弱化题目，设 $n &#x3D; k + 1$，发现只需要每一个数不取询问 $k$ 次，通过前缀和得出。</p>
+<p>再设 $k + 1 \ | \ n$，发现只需要类似分块即可解决。</p>
+<p>回到原题，最后的一部分如何计算？我们可以对 $[n - k, n]$ 这个区间做询问，但是对于已经计算的数不再去除。把每一个得到的和减去前面已经计算的数的和就是真实的和，类似的也能计算出。</p>
+<p>询问次数刚好为 $n$，时间复杂度为 $\mathcal{O}(n)$，可以通过此题。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yh2021shx.github.com/2023/08/08/P9493%20%E3%80%8CSFCOI-3%E3%80%8D%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%88%97%E7%9A%84%E6%8E%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/usericon/561714.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yh2021shx's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/08/08/P9493%20%E3%80%8CSFCOI-3%E3%80%8D%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%88%97%E7%9A%84%E6%8E%92/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-08-08T22:02:35+08:00">
+                2023-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>首先手玩样例，考虑极端情况，发现 $n-1$ 一定放左边或者右边。发现可以不考虑 $n-1$，则每个数只能放左边或者右边。</p>
+<p>考虑只设一维的 $dp_i$ 表示前 $i$ 个数的合法情况，发现显然过不了样例，比如样例 $1$，我们发现 $2$ 和 $3$ 是不能放一起的。</p>
+<p>那么容易列出 $dp_{i,j}$ 表示前 $i$ 个数中，$j$ 个放左边的合法数量，转移方程易得。此题结。</p>
+<p>核心代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">g</span> (i, n, <span class="number">1</span>) &#123;</span><br><span class="line">     <span class="built_in">f</span> (j, <span class="number">0</span>, n - i + <span class="number">1</span>) &#123;</span><br><span class="line">        dp[i][j] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (p[i] &lt;= n - j &amp;&amp; j &gt; <span class="number">0</span> &amp;&amp; p[i] &gt;= i - <span class="number">1</span>) dp[i][j] = dp[i + <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (p[i] &lt;= j + i - <span class="number">1</span> &amp;&amp; n - i - j + <span class="number">1</span> &gt; <span class="number">0</span> &amp;&amp; p[i] &gt;= i - <span class="number">1</span>) (dp[i][j] += dp[i + <span class="number">1</span>][j]) %= mod;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) (ans += dp[i][j]) %= mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yh2021shx.github.com/2023/07/17/%5B23.07.17%5DCSPS01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -821,7 +1190,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
