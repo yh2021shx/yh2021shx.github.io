@@ -37,27 +37,31 @@
   <!-- 页面元数据 -->
   <title>ARC163 C 题题解 - yh2021shx's blog</title>
   <meta name="keywords" content="ARC,null">
-  <meta desc name="description" content="1 题目大意1.1 题目翻译
-给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：
-
-$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$
-
-$a$ 数组内的元素互不相同
-
-$1 \leq a_i \leq 10^9$
+  <meta desc name="description" content="
 
 
-有 $t$ 组数据。 - yh2021shx - yh2021shx's blog">
+ 1 题目大意
+1.1 题目翻译
+给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\{a_i\}{ai​}，使得：
+
+
+∑i=1n1ai=1\sum_{i = 1}^n\frac{1}{a_i} = 1∑i=1n​ai​1​=1
+
+
+aaa 数组内的元素互不相同
+
+
+1≤ai≤1091 \l... - yh2021shx - yh2021shx's blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARC163 C 题题解">
 <meta property="og:url" content="https://yh2021shx.github.com/2023/07/03/ARC163C/index.html">
 <meta property="og:site_name" content="yh2021shx&#39;s blog">
-<meta property="og:description" content="1 题目大意1.1 题目翻译 给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：  $\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$  $a$ 数组内的元素互不相同  $1 \leq a_i \leq 10^9$   有 $t$ 组数据。">
+<meta property="og:description" content="1 题目大意 1.1 题目翻译 给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\{a_i\}{ai​}，使得：   ∑i&#x3D;1n1ai&#x3D;1\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1∑i&#x3D;1n​ai​1​&#x3D;1   aaa 数组内的元素互不相同   1≤ai≤1091 \leq a_i \leq 10^91≤ai​≤109   有 ttt 组数据。">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-03T10:16:20.772Z">
-<meta property="article:modified_time" content="2023-08-07T04:14:09.844Z">
+<meta property="article:modified_time" content="2023-10-23T14:14:34.546Z">
 <meta property="article:author" content="yh2021shx">
 <meta property="article:tag" content="ARC">
 <meta name="twitter:card" content="summary">
@@ -1710,9 +1714,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
-        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
+        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
     '</div>');
 </script>
 
@@ -1740,9 +1744,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -2124,7 +2128,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698067094432),
+    lastupdate: new Date(1698070592411),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2162,8 +2166,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     languages: {
       
         search: {
-          hits_empty: "找不到您查询的内容：${query}",
-          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
+          hits_empty: "We didn't find any results for the search: ${query}.",
+          hits_stats: "${hits} results found in ${time} ms",
         }
       
     }
@@ -2487,7 +2491,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
     <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
+    <p itemprop="name">DE_aemmprty</p>
   </a>
 </div>
 
@@ -2540,40 +2544,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h3 id="1-题目大意"><a href="#1-题目大意" class="headerlink" title="1 题目大意"></a>1 题目大意</h3><p><strong>1.1 题目翻译</strong></p>
-<p>给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：</p>
+    <link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+<script defer src="https://unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
+<script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<h3 id="1-题目大意"><a class="markdownIt-Anchor" href="#1-题目大意"></a> 1 题目大意</h3>
+<p><strong>1.1 题目翻译</strong></p>
+<p>给你一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，你需要构造一组大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的数组 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{a_i\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>，使得：</p>
 <ul>
-<li><p>$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mfrac><mn>1</mn><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sum_{i = 1}^n\frac{1}{a_i} = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2902079999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
 </li>
-<li><p>$a$ 数组内的元素互不相同</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 数组内的元素互不相同</p>
 </li>
-<li><p>$1 \leq a_i \leq 10^9$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq a_i \leq 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7859700000000001em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></p>
 </li>
 </ul>
-<p>有 $t$ 组数据。</p>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 组数据。</p>
 <span id="more"></span>
-
 <p><strong>1.2 数据范围</strong></p>
-<p>对于 $100%$ 的数据：</p>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">100\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">%</span></span></span></span> 的数据：</p>
 <ul>
-<li><p>$1 \leq n \leq 500$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>500</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span></p>
 </li>
-<li><p>$1 \leq t \leq 500$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>500</mn></mrow><annotation encoding="application/x-tex">1 \leq t \leq 500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span></p>
 </li>
 </ul>
-<h3 id="2-解法分析"><a href="#2-解法分析" class="headerlink" title="2 解法分析"></a>2 解法分析</h3><p><strong>0 前情提要</strong></p>
-<p>做这道题之前，你至少要想到 $\frac{1}{n}-\frac{1}{n+1} &#x3D; \frac{1}{n \times (n + 1)}$，不然别搞 OI 了。<del>自己骂自己是吧</del></p>
+<h3 id="2-解法分析"><a class="markdownIt-Anchor" href="#2-解法分析"></a> 2 解法分析</h3>
+<p><strong>0 前情提要</strong></p>
+<p>做这道题之前，你至少要想到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>−</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>×</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{n}-\frac{1}{n+1} = \frac{1}{n \times (n + 1)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.2484389999999999em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.365108em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，不然别搞 OI 了。<s>自己骂自己是吧</s></p>
 <p><strong>1 题目解法</strong></p>
-<p>首先，$n &#x3D; 1$ 有 $a &#x3D; {1}$，$n &#x3D; 2$ 无解。十分显然。接下来考虑 $n &gt; 3$ 的情况。</p>
-<p>由上面的式子得 $\frac{1}{n\times(n + 1)} + \frac{1}{n + 1} &#x3D; \frac{1}{n}$，容易想到构造出 $a &#x3D; {2, 6, \cdots, n \times (n - 1), n}$。此时，$a$ 满足前两条要求。</p>
-<p>但是第三条不一定。因为这个 $n$ 可能是 $k \times (k + 1)$ 的形式，很烦。所以，考虑单独处理 $n &#x3D; k \times (k + 1)$。</p>
-<p>接下来这一步很考验人的构造能力。既然 $n$ 不好构造，我们就可以尝试把 $n$ 变成 $n-1$。这时，可以设 $a’ &#x3D; {2, 2 \times a_1, 2 \times a_2, \cdots, 2 \times a_{n - 1}}$。这时，我们把问题的规模缩小到了 $n - 1$，显然 $n - 1 \neq k \times (k + 1)$。这个序列的证明也十分显然，这里不过多叙述。</p>
+<p>首先，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a = \{1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mclose">}</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 无解。十分显然。接下来考虑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">n &gt; 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 的情况。</p>
+<p>由上面的式子得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>×</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{n\times(n + 1)} + \frac{1}{n + 1} = \frac{1}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.365108em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.2484389999999999em;vertical-align:-0.403331em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.403331em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，容易想到构造出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mo stretchy="false">{</mo><mn>2</mn><mo separator="true">,</mo><mn>6</mn><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>n</mi><mo>×</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a = \{2, 6, \cdots, n \times (n - 1), n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">}</span></span></span></span>。此时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 满足前两条要求。</p>
+<p>但是第三条不一定。因为这个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 可能是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>×</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">k \times (k + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 的形式，很烦。所以，考虑单独处理 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>k</mi><mo>×</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n = k \times (k + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>。</p>
+<p>接下来这一步很考验人的构造能力。既然 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 不好构造，我们就可以尝试把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。这时，可以设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><mo stretchy="false">{</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo>×</mo><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><mn>2</mn><mo>×</mo><msub><mi>a</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mn>2</mn><mo>×</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a&#x27; = \{2, 2 \times a_1, 2 \times a_2, \cdots, 2 \times a_{n - 1}\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.751892em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>。这时，我们把问题的规模缩小到了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，显然 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn><mo mathvariant="normal">≠</mo><mi>k</mi><mo>×</mo><mo stretchy="false">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n - 1 \neq k \times (k + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>。这个序列的证明也十分显然，这里不过多叙述。</p>
 <p>至此，问题得解。</p>
-<h3 id="3-AC-Code"><a href="#3-AC-Code" class="headerlink" title="3 AC Code"></a>3 AC Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    n = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123; <span class="comment">// 特判 1</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n1\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">2</span>) &#123; <span class="comment">// 特判 2</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;No\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*判断 n 是否为形如 k * (k + 1) 的数*/</span></span><br><span class="line">    <span class="type">int</span> k = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (k * (k + <span class="number">1</span>) &lt; n)</span><br><span class="line">        k ++;</span><br><span class="line">    <span class="keyword">if</span> (k * (k + <span class="number">1</span>) != n) &#123; <span class="comment">// 不是，则 a = &#123;2, 6, ..., n * (n - 1), n&#125;</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">        <span class="built_in">f</span> (i, <span class="number">1</span>, n - <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>, i * (i + <span class="number">1</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123; <span class="comment">// 是，则 a = &#123;2, 4, 12, ..., 2 * (n - 2) * (n - 1), 2 * n - 2&#125;</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n2 &quot;</span>);</span><br><span class="line">        <span class="built_in">f</span> (i, <span class="number">1</span>, n - <span class="number">2</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>, <span class="number">2</span> * i * (i + <span class="number">1</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, <span class="number">2</span> * n - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-ac-code"><a class="markdownIt-Anchor" href="#3-ac-code"></a> 3 AC Code</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    n = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123; <span class="comment">// 特判 1</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n1\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">2</span>) &#123; <span class="comment">// 特判 2</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;No\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*判断 n 是否为形如 k * (k + 1) 的数*/</span></span><br><span class="line">    <span class="type">int</span> k = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (k * (k + <span class="number">1</span>) &lt; n)</span><br><span class="line">        k ++;</span><br><span class="line">    <span class="keyword">if</span> (k * (k + <span class="number">1</span>) != n) &#123; <span class="comment">// 不是，则 a = &#123;2, 6, ..., n * (n - 1), n&#125;</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">        <span class="built_in">f</span> (i, <span class="number">1</span>, n - <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>, i * (i + <span class="number">1</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123; <span class="comment">// 是，则 a = &#123;2, 4, 12, ..., 2 * (n - 2) * (n - 1), 2 * n - 2&#125;</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Yes\n2 &quot;</span>);</span><br><span class="line">        <span class="built_in">f</span> (i, <span class="number">1</span>, n - <span class="number">2</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>, <span class="number">2</span> * i * (i + <span class="number">1</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, <span class="number">2</span> * n - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<link rel="stylesheet" href="https://unpkg.com/gitalk@1/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@1/dist/gitalk.min.js"></script>
-<div id="gitalk-container"></div>
   </div>
   
   
@@ -2597,10 +2608,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-08-07T12:14:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-23T22:14:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 7, 2023</p>
+    <p>更新于：Oct 23, 2023</p>
   </a>
 </div>
 
@@ -2626,17 +2637,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=1 题目大意1.1 题目翻译
-给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：
-
-$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$
-
-$a$ 数组内的元素互不相同
-
-$1 \leq a_i \leq 10^9$
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=
 
 
-有 $t$ 组数据。"
+ 1 题目大意
+1.1 题目翻译
+给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\{a_i\}{ai​}，使得：
+
+
+∑i=1n1ai=1\sum_{i = 1}^n\frac{1}{a_i} = 1∑i=1n​ai​1​=1
+
+
+aaa 数组内的元素互不相同
+
+
+1≤ai≤1091 \leq a_i \leq 10^91≤ai​≤109
+
+
+有 ttt 组数据。"
           
           >
           
@@ -2648,17 +2666,24 @@ $1 \leq a_i \leq 10^9$
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=1 题目大意1.1 题目翻译
-给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：
-
-$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$
-
-$a$ 数组内的元素互不相同
-
-$1 \leq a_i \leq 10^9$
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=
 
 
-有 $t$ 组数据。"
+ 1 题目大意
+1.1 题目翻译
+给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\{a_i\}{ai​}，使得：
+
+
+∑i=1n1ai=1\sum_{i = 1}^n\frac{1}{a_i} = 1∑i=1n​ai​1​=1
+
+
+aaa 数组内的元素互不相同
+
+
+1≤ai≤1091 \leq a_i \leq 10^91≤ai​≤109
+
+
+有 ttt 组数据。"
           
           >
           
@@ -2670,17 +2695,24 @@ $1 \leq a_i \leq 10^9$
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=1 题目大意1.1 题目翻译
-给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：
-
-$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$
-
-$a$ 数组内的元素互不相同
-
-$1 \leq a_i \leq 10^9$
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yh2021shx.github.com/2023/07/03/ARC163C/&title=ARC163 C 题题解 - yh2021shx's blog&summary=
 
 
-有 $t$ 组数据。"
+ 1 题目大意
+1.1 题目翻译
+给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\{a_i\}{ai​}，使得：
+
+
+∑i=1n1ai=1\sum_{i = 1}^n\frac{1}{a_i} = 1∑i=1n​ai​1​=1
+
+
+aaa 数组内的元素互不相同
+
+
+1≤ai≤1091 \leq a_i \leq 10^91≤ai​≤109
+
+
+有 ttt 组数据。"
           
           >
           
@@ -2715,7 +2747,12 @@ $1 \leq a_i \leq 10^9$
       
         <a class='prev' href='/2023/07/17/%5B23.07.17%5DCSPS01/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CSP-S 模拟赛 01 比赛报告</p>
-          <p class='content'>CSP-S 模拟赛 #01 比赛报告1 概况比赛情况：
+          <p class='content'>
+
+
+ CSP-S 模拟赛 #01 比赛报告
+ 1 概况
+比赛情况：
 
 
 
@@ -2729,21 +2766,26 @@ D
 
 
 
+
 23.07.17
 155
 #3
-$\color{yellow}{20}$
-$\color{g...</p>
+20\color{yellow}{20}20...</p>
         </a>
       
       
         <a class='next' href='/2023/06/29/ABC302G/'>
           <p class='title'>ABC302 G 题题解<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1 题目大意1.1 题目翻译
-有两个人轮流取物品。总共有 $n$ 个物品，第 $i$ 个物品的价值为 $w_i$。
+          <p class='content'>
+
+
+ 1 题目大意
+1.1 题目翻译
+有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。
 他们按照下面的其中一种方式取物品：
 
-取出这一排物品最前面的或者最后面的。这一...</p>
+
+取出这一排物品最前面的...</p>
         </a>
       
     </div>
@@ -2804,7 +2846,7 @@ $\color{g...</p>
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="toc-text">1 题目大意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-text">2 解法分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-AC-Code"><span class="toc-text">3 AC Code</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="toc-text"> 1 题目大意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A7%A3%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-text"> 2 解法分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ac-code"><span class="toc-text"> 3 AC Code</span></a></li></ol>
   </div>
 </section>
 
@@ -2847,14 +2889,14 @@ $\color{g...</p>
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
@@ -2982,51 +3024,28 @@ $\color{g...</p>
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
+      <script type="text/javascript">
+  volantis.layoutHelper("comments",`<div id="gitalk-container"></div>`)
+  function p_gitalk() {
+    if(!document.querySelector("#gitalk-container"))return;
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-
-    return document.getElementById("giscus_container");
+    if (document.getElementById('gitalk-container') != null) {
+      var gitalk = new Gitalk(
+        Object.assign(
+          Object.assign({"clientID":"b3308db46a55496c076c","clientSecret":"1675737afb2537225c142b731ec0de8a53345fd6","repo":"yh2021shx.github.io","owner":"yh2021shx","admin":"yh2021shx"}, {
+            id: path,
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          }),
+        pdata.commentConfig)
+      );
+      gitalk.render('gitalk-container');
+    }
   }
-
-  function p_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  p_giscus();
-  volantis.dark.push(dark_giscus);
+  volantis.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js').then(p_gitalk)
 </script>
 
     
@@ -3298,7 +3317,7 @@ $\color{g...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","sameAs":["https://github.com/volantis-x"],"description":"学 whk 学累了就来这里睡一会~"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yh2021shx.github.com/","name":"yh2021shx's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yh2021shx.github.com/categories/Solutions/","name":"Solutions"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yh2021shx.github.com/2023/07/03/ARC163C/","name":"ARC163 C 题题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","keywords":null,"description":"学 whk 学累了就来这里睡一会~","author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","description":"学 whk 学累了就来这里睡一会~"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yh2021shx.github.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ARC163 C 题题解","description":"1 题目大意1.1 题目翻译\n给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：\n\n$\\sum_{i &#x3D; 1}^n\\frac{1}{a_i} &#x3D; 1$\n\n$a$ 数组内的元素互不相同\n\n$1 \\leq a_i \\leq 10^9$\n\n\n有 $t$ 组数据。","inLanguage":["zh-Hans","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://yh2021shx.github.com/2023/07/03/ARC163C/"},"author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yh2021shx.github.com/2023/07/03/ARC163C/","wordCount":152,"datePublished":"2023-07-03T10:16:20.772Z","dateModified":"2023-08-07T04:14:09.844Z","articleSection":"Solutions","keywords":"ARC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","sameAs":["https://github.com/volantis-x"],"description":"学 whk 学累了就来这里睡一会~"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yh2021shx.github.com/","name":"yh2021shx's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yh2021shx.github.com/categories/Solutions/","name":"Solutions"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yh2021shx.github.com/2023/07/03/ARC163C/","name":"ARC163 C 题题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","keywords":null,"description":"学 whk 学累了就来这里睡一会~","author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","description":"学 whk 学累了就来这里睡一会~"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yh2021shx.github.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ARC163 C 题题解","description":"\n\n\n 1 题目大意\n1.1 题目翻译\n给你一个 nnn，你需要构造一组大小为 nnn 的数组 {ai}\\{a_i\\}{ai​}，使得：\n\n\n∑i=1n1ai=1\\sum_{i = 1}^n\\frac{1}{a_i} = 1∑i=1n​ai​1​=1\n\n\naaa 数组内的元素互不相同\n\n\n1≤ai≤1091 \\leq a_i \\leq 10^91≤ai​≤109\n\n\n有 ttt 组数据。","inLanguage":["zh-Hans","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://yh2021shx.github.com/2023/07/03/ARC163C/"},"author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yh2021shx.github.com/2023/07/03/ARC163C/","wordCount":195,"datePublished":"2023-07-03T10:16:20.772Z","dateModified":"2023-10-23T14:14:34.546Z","articleSection":"Solutions","keywords":"ARC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

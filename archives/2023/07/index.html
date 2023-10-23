@@ -35,7 +35,7 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023/7 - yh2021shx's blog</title>
+  <title>Archive: 2023/7 - yh2021shx's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="学 whk 学累了就来这里睡一会~ - yh2021shx - yh2021shx's blog">
   
@@ -1697,9 +1697,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
-        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
+        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
     '</div>');
 </script>
 
@@ -1727,9 +1727,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698067094432),
+    lastupdate: new Date(1698070592411),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2149,8 +2149,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     languages: {
       
         search: {
-          hits_empty: "找不到您查询的内容：${query}",
-          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
+          hits_empty: "We didn't find any results for the search: ${query}.",
+          hits_stats: "${hits} results found in ${time} ms",
         }
       
     }
@@ -2469,18 +2469,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>帮助</p>
             </a>
           
-            <a href="/examples/"
+            <a href="/friends/"
               
               
-              active-action="action-examples">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              active-action="action-contributors">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f389.svg'><p>社区</p>
+              active-action="action-friends">
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f396.svg'><p>友链</p>
             </a>
           
             <a href="/archives/"
@@ -2488,13 +2481,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               active-action="action-archives">
               <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              active-action="action-https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
           
         
@@ -2554,47 +2540,57 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <h1 id="CSP-S-模拟赛-01-比赛报告"><a href="#CSP-S-模拟赛-01-比赛报告" class="headerlink" title="CSP-S 模拟赛 #01 比赛报告"></a>CSP-S 模拟赛 #01 比赛报告</h1><h2 id="1-概况"><a href="#1-概况" class="headerlink" title="1 概况"></a>1 概况</h2><p>比赛情况：</p>
+      <link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+<script defer src="https://unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
+<script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<h2 id="csp-s-模拟赛-01-比赛报告"><a class="markdownIt-Anchor" href="#csp-s-模拟赛-01-比赛报告"></a> CSP-S 模拟赛 #01 比赛报告</h2>
+<h3 id="1-概况"><a class="markdownIt-Anchor" href="#1-概况"></a> 1 概况</h3>
+<p>比赛情况：</p>
 <table>
 <thead>
 <tr>
-<th align="center">场次</th>
-<th align="center">分数</th>
-<th align="center">排名</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
+<th style="text-align:center">场次</th>
+<th style="text-align:center">分数</th>
+<th style="text-align:center">排名</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">23.07.17</td>
-<td align="center">155</td>
-<td align="center">#3</td>
-<td align="center">$\color{yellow}{20}$</td>
-<td align="center">$\color{green}{100}$</td>
-<td align="center">$\color{red}{0}$</td>
-<td align="center">$\color{yellow}{35}$</td>
+<tbody>
+<tr>
+<td style="text-align:center">23.07.17</td>
+<td style="text-align:center">155</td>
+<td style="text-align:center">#3</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="yellow"><mn>20</mn></mstyle></mrow><annotation encoding="application/x-tex">\color{yellow}{20}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord" style="color:yellow;"><span class="mord" style="color:yellow;">2</span><span class="mord" style="color:yellow;">0</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mn>100</mn></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord" style="color:green;"><span class="mord" style="color:green;">1</span><span class="mord" style="color:green;">0</span><span class="mord" style="color:green;">0</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord" style="color:red;"><span class="mord" style="color:red;">0</span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="yellow"><mn>35</mn></mstyle></mrow><annotation encoding="application/x-tex">\color{yellow}{35}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord" style="color:yellow;"><span class="mord" style="color:yellow;">3</span><span class="mord" style="color:yellow;">5</span></span></span></span></span></td>
 </tr>
-</tbody></table>
-<p>知识点 &#x2F; 补题情况：（绿色为已补，红色为尝试补）</p>
+</tbody>
+</table>
+<p>知识点 / 补题情况：（绿色为已补，红色为尝试补）</p>
 <table>
 <thead>
 <tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">D</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">$\color{green}{\text{组合+性质}}$</td>
-<td align="center">$\color{green}{\text{拆点最短路}}$</td>
-<td align="center">$\color{red}{\text{图论}}$</td>
-<td align="center">$\color{red}{\text{博弈论+分讨}}$</td>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>组合+性质</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{\text{组合+性质}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord" style="color:green;"><span class="mord text" style="color:green;"><span class="mord cjk_fallback" style="color:green;">组合</span><span class="mord" style="color:green;">+</span><span class="mord cjk_fallback" style="color:green;">性质</span></span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="green"><mtext>拆点最短路</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{green}{\text{拆点最短路}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:green;"><span class="mord text" style="color:green;"><span class="mord cjk_fallback" style="color:green;">拆点最短路</span></span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>图论</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{\text{图论}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord" style="color:red;"><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">图论</span></span></span></span></span></span></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mtext>博弈论+分讨</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{\text{博弈论+分讨}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord" style="color:red;"><span class="mord text" style="color:red;"><span class="mord cjk_fallback" style="color:red;">博弈论</span><span class="mord" style="color:red;">+</span><span class="mord cjk_fallback" style="color:red;">分讨</span></span></span></span></span></span></td>
 </tr>
-</tbody></table>
-<h2 id="2-比赛过程"><a href="#2-比赛过程" class="headerlink" title="2 比赛过程"></a>2 比赛过程</h2><p>先通读一遍，觉得 A 和 C 可做。先做 A，对着式子推很久没推出来 $\mathcal{O}(n\log{n})$，决定先开 B。迭代了一下发现有周期，用拆点最短路快速写完看 C。一直不会 Subtask 2，决定先写暴力，样例过了。开 D，快速写完一个四维 dp，用暴力跑了几个 Subtask 4，找到规律了写上。本来以为这个能过 Subtask 3，但是因为 $T \leq 50$ 没过。写了 B 的对拍，很对，于是最后全力冲 A 失败了。</p>
+</tbody>
+</table>
+<h3 id="2-比赛过程"><a class="markdownIt-Anchor" href="#2-比赛过程"></a> 2 比赛过程</h3>
+<p>先通读一遍，觉得 A 和 C 可做。先做 A，对着式子推很久没推出来 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n\log{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">n</span></span><span class="mclose">)</span></span></span></span>，决定先开 B。迭代了一下发现有周期，用拆点最短路快速写完看 C。一直不会 Subtask 2，决定先写暴力，样例过了。开 D，快速写完一个四维 dp，用暴力跑了几个 Subtask 4，找到规律了写上。本来以为这个能过 Subtask 3，但是因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>≤</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">T \leq 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span></span></span></span> 没过。写了 B 的对拍，很对，于是最后全力冲 A 失败了。</p>
 <p>赛后发现 C 写挂了，调了一会暴力然后润了。</p>
     
   </div>
@@ -2616,7 +2612,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/07/17/%5B23.07.17%5DCSPS01/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2656,17 +2652,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <h3 id="1-题目大意"><a href="#1-题目大意" class="headerlink" title="1 题目大意"></a>1 题目大意</h3><p><strong>1.1 题目翻译</strong></p>
-<p>给你一个 $n$，你需要构造一组大小为 $n$ 的数组 ${a_i}$，使得：</p>
+      <link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+<script defer src="https://unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
+<script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<h3 id="1-题目大意"><a class="markdownIt-Anchor" href="#1-题目大意"></a> 1 题目大意</h3>
+<p><strong>1.1 题目翻译</strong></p>
+<p>给你一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，你需要构造一组大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的数组 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{a_i\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>，使得：</p>
 <ul>
-<li><p>$\sum_{i &#x3D; 1}^n\frac{1}{a_i} &#x3D; 1$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mfrac><mn>1</mn><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sum_{i = 1}^n\frac{1}{a_i} = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2902079999999998em;vertical-align:-0.44509999999999994em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
 </li>
-<li><p>$a$ 数组内的元素互不相同</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 数组内的元素互不相同</p>
 </li>
-<li><p>$1 \leq a_i \leq 10^9$</p>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq a_i \leq 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7859700000000001em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></p>
 </li>
 </ul>
-<p>有 $t$ 组数据。</p>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 组数据。</p>
     
   </div>
   
@@ -2687,7 +2690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/07/03/ARC163C/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2885,14 +2888,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
@@ -3020,51 +3023,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
+      <script type="text/javascript">
+  volantis.layoutHelper("comments",`<div id="gitalk-container"></div>`)
+  function p_gitalk() {
+    if(!document.querySelector("#gitalk-container"))return;
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
     }
-
-    return document.getElementById("giscus_container");
+    if (document.getElementById('gitalk-container') != null) {
+      var gitalk = new Gitalk(
+        Object.assign(
+          Object.assign({"clientID":"b3308db46a55496c076c","clientSecret":"1675737afb2537225c142b731ec0de8a53345fd6","repo":"yh2021shx.github.io","owner":"yh2021shx","admin":"yh2021shx"}, {
+            id: path,
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          }),
+        pdata.commentConfig)
+      );
+      gitalk.render('gitalk-container');
+    }
   }
-
-  function p_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  p_giscus();
-  volantis.dark.push(dark_giscus);
+  volantis.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js').then(p_gitalk)
 </script>
 
     
