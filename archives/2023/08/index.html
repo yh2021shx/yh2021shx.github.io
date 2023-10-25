@@ -23,7 +23,6 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   <!-- import head_begin begin -->
-      <meta name="theme-color" content="#ffffff">
   <!-- import head_begin end -->
   <!-- Custom Files headBegin begin-->
   
@@ -35,7 +34,7 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023/8 - yh2021shx's blog</title>
+  <title>Archive: 2023/8 - yh2021shx's blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="学 whk 学累了就来这里睡一会~ - yh2021shx - yh2021shx's blog">
   
@@ -1697,9 +1696,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
-        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
+        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
     '</div>');
 </script>
 
@@ -1727,9 +1726,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -2111,7 +2110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698144868808),
+    lastupdate: new Date(1698240927269),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2149,15 +2148,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     languages: {
       
         search: {
-          hits_empty: "找不到您查询的内容：${query}",
-          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
+          hits_empty: "We didn't find any results for the search: ${query}.",
+          hits_stats: "${hits} results found in ${time} ms",
         }
       
     }
   }
 </script>
   <!-- import head_end begin -->
-      <meta name="hello" content="world">
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
   
@@ -2165,7 +2163,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
-        <script></script>
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
     
@@ -2381,6 +2378,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">DE_aemmprty</p>
     
     
+      <p class="subtitle"><div id="binft"></div></p>
+    
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
@@ -2476,7 +2475,72 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+      <script defer>
+    var binft = function (r) {
+var isTransparent = true;
+function getRandomColor() {
+    if(isTransparent){
+        isTransparent = false;
+        //此处修改字体颜色,最后的 0 和 1 不要改
+        return "rgba(255,255,255,0)"
+    }else{
+        isTransparent = true;
+        return "rgba(255,255,255,1)"
+    }
+}  
+function n(r) {
+    for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+        var oneword = document.createElement("span");
+        oneword.textContent = "|"; // 此处是末尾字符,如果想用光标样式可以改为"|"
+        oneword.style.color = getRandomColor();
+        n.appendChild(oneword);
+    }
+    return n
+}
+function i() {
+    var t = wordList[c.skillI];
+    c.step ? c.step-- : (c.step = refreshDelayTime, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = showTotalWordDelayTime) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % wordList.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(maxLength, maxLength + c.prefixP) : Math.min(maxLength, t.length - c.skillP))), setTimeout(i, d)
+}
+var l = "",
+//此处改成你自己的诗词
+wordList = [ 
+        "有花堪折直需折,莫待无花空折枝.",
+        "闲居少邻并,草径入荒园.鸟宿池边树,僧敲月下门.",
+        "侯门一入深如海,从此萧郎是路人.",
+        "才见岭头云似盖,已惊岩下雪如尘.",
+        "人间万事消磨尽,只有清香似旧时.",
+        "日暮酒醒人已远,满天风雨下西楼.",
+        "落灯花,棋未收,叹新丰逆旅淹留.",
+        "软风吹过窗纱,心期便隔天涯.",
+        "迷惑失故路,薄暮无宿栖.",
+        "不见白头相携老,只许与君共天明.",
+        "晓迎秋露一枝新,不占园中最上春.",
+        "荷尽已无擎雨盖,菊残犹有傲霜枝.",
+        "春未绿,鬓先丝.人间别久不成悲.",
+        "江东子弟多才俊,卷土重来未可知.",
+        "莫听穿林打叶声,何妨吟啸且徐行.",
+        "在天愿作比翼鸟,在地愿为连理枝.",
+    ].map(function (r) {
+return r + ""
+}),
+showTotalWordDelayTime = 2,
+refreshDelayTime = 1,
+maxLength = 1,
+d = 75,
+c = {
+    text: "",
+    prefixP: -maxLength,
+    skillI: 0,
+    skillP: 0,
+    direction: "forward",
+    delay: showTotalWordDelayTime,
+    step: refreshDelayTime
+};
+i()
+};
+binft(document.getElementById('binft'));
+</script>
+<link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
 <script defer src="https://unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
 <script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 <h3 id="at_abc313_d-odd-or-even"><a class="markdownIt-Anchor" href="#at_abc313_d-odd-or-even"></a> [AT_abc313_d] Odd or Even</h3>
@@ -2504,7 +2568,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/08/11/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2575,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/08/08/%E4%BA%8C%E5%8D%81%E4%B8%89/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2639,7 +2703,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/08/08/%5BAT_abc313_d%5DOddorEven/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2707,7 +2771,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/2023/08/08/P9493%20%E3%80%8CSFCOI-3%E3%80%8D%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%88%97%E7%9A%84%E6%8E%92/' itemprop="url">
-            阅读全文
+            Read More
           </a>
         </div>
       
@@ -2747,6 +2811,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       <div class='text'>
         
+        
+          <div id="binft"></div>
         
         
           <p><span id="jinrishici-sentence">yh2021shx's blog</span></p>
@@ -2905,14 +2971,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
@@ -3340,7 +3406,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
     </div>
     <!-- import body_end begin-->
-        <script></script>
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
     
