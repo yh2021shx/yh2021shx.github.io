@@ -32,6 +32,9 @@
 <script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 <link rel="stylesheet" href="/custom/darkmode.css" type="text/css"/>
 <link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script defer type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script defer type="text/javascript" src="/custom/fireworks.js"></script>
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
@@ -44,19 +47,7 @@
   <!-- 页面元数据 -->
   <title>ABC302 G 题题解 - yh2021shx's blog</title>
   <meta name="keywords" content="ABC,null">
-  <meta desc name="description" content="
-
-
- 1 题目大意
-1.1 题目翻译
-有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。
-他们按照下面的其中一种方式取物品：
-
-
-取出这一排物品最前面的或者最后面的。这一步没有代价。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(B,m)\min(B, m)min... - yh2021shx - yh2021shx's blog">
+  <meta desc name="description" content="学 whk 学累了就来这里睡一会~ - yh2021shx - yh2021shx's blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="ABC302 G 题题解">
@@ -66,7 +57,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-29T10:52:45.240Z">
-<meta property="article:modified_time" content="2023-10-25T11:38:29.904Z">
+<meta property="article:modified_time" content="2023-11-10T10:45:32.792Z">
 <meta property="article:author" content="yh2021shx">
 <meta property="article:tag" content="ABC">
 <meta name="twitter:card" content="summary">
@@ -122,7 +113,7 @@
   -webkit-border-radius: 2px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #c618c8;
 }
 html {
   color: var(--color-text);
@@ -168,7 +159,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #99c84e;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -179,7 +170,7 @@ a {
   -ms-transition: all 0.28s ease;
 }
 a:hover {
-  color: #ff5722;
+  color: #c618c8;
 }
 a:active,
 a:hover {
@@ -747,7 +738,7 @@ button {
     -webkit-border-radius: 0;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
+    background: #c618c8;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
@@ -1850,9 +1841,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>`+
+        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支持，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行訪問。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解詳情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1880,9 +1871,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>
+        <span class="kill-c">本頁面需要瀏覽器支持（啟用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解詳情 ></strong></a>
     </div>
 </noscript>
 
@@ -1897,9 +1888,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1699612227772),
+    lastupdate: new Date(1699623877699),
     sidebar: {
-      for_page: ["grid","blogger","category","tagcloud","donate","webinfo","music"],
+      for_page: ["feedback","blogger","category","tagcloud","donate","webinfo","music"],
       for_post: ["webinfo","music","toc"],
       webinfo: {
         lastupd: {
@@ -1923,7 +1914,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left theme","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right theme","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo theme","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up theme","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy red","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search yellow","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search green","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt accent","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link theme","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image accent","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images theme","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print green","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open red","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch orange","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch yellow","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon yellow","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     }
   }
@@ -2985,6 +2976,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字數：1.6k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>時長：8分鐘</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/Solutions/">Solutions</a>
@@ -3044,7 +3053,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <p>最后一个人取出物品的价值为所有他取出物品价值之和减去他所花费的代价。问当两人均以最优策略取物品时，先手取出物品的价值减去后手取出物品的价值为多少。</p>
-<span id="more"></span>
 <p><strong>1.2 数据范围</strong></p>
 <p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">100\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">%</span></span></span></span> 的数据：</p>
 <ul>
@@ -3123,12 +3131,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-25T19:38:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-10T18:45:32+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 25, 2023</p>
+    <p>更新于：Nov 10, 2023</p>
   </a>
 </div>
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字數：1.6k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>時長：8分鐘</p>
+    </a>
+  </div>
+
 
         
       
@@ -3149,25 +3175,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary=
-
-
- 1 题目大意
-1.1 题目翻译
-有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。
-他们按照下面的其中一种方式取物品：
-
-
-取出这一排物品最前面的或者最后面的。这一步没有代价。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(B,m)\min(B, m)min(B,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 AAA。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(D,m)\min(D, m)min(D,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 CCC。
-
-
-最后一个人取出物品的价值为所有他取出物品价值之和减去他所花费的代价。问当两人均以最优策略取物品时，先手取出物品的价值减去后手取出物品的价值为多少。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary="
           
           >
           
@@ -3179,25 +3187,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary=
-
-
- 1 题目大意
-1.1 题目翻译
-有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。
-他们按照下面的其中一种方式取物品：
-
-
-取出这一排物品最前面的或者最后面的。这一步没有代价。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(B,m)\min(B, m)min(B,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 AAA。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(D,m)\min(D, m)min(D,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 CCC。
-
-
-最后一个人取出物品的价值为所有他取出物品价值之和减去他所花费的代价。问当两人均以最优策略取物品时，先手取出物品的价值减去后手取出物品的价值为多少。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary="
           
           >
           
@@ -3209,25 +3199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary=
-
-
- 1 题目大意
-1.1 题目翻译
-有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。
-他们按照下面的其中一种方式取物品：
-
-
-取出这一排物品最前面的或者最后面的。这一步没有代价。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(B,m)\min(B, m)min(B,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 AAA。
-
-
-设还剩下 mmm 个物品，那么重复取出 min⁡(D,m)\min(D, m)min(D,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 CCC。
-
-
-最后一个人取出物品的价值为所有他取出物品价值之和减去他所花费的代价。问当两人均以最优策略取物品时，先手取出物品的价值减去后手取出物品的价值为多少。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yh2021shx.github.com/2023/06/29/ABC302G/&title=ABC302 G 题题解 - yh2021shx's blog&summary="
           
           >
           
@@ -3323,7 +3295,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>9 篇</div>
+          <div>10 篇</div>
         </div>
       
 
@@ -3338,7 +3310,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>5.9k 字</div>
+          <div>6.1k 字</div>
         </div>
       
 
@@ -3542,7 +3514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客內容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW">姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</a></p>
 </div>
       
     
@@ -3554,9 +3526,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作為主題
       
     
       
@@ -3630,19 +3602,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <li class='navigation menuNavigation-Content'>
 
 
-    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left theme fa-fw"></i></a>
 
 
 
-    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right theme fa-fw"></i></a>
 
 
 
-    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo theme fa-fw"></i></a>
 
 
 
-    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up theme fa-fw"></i></a>
 
 
   </li>
@@ -3681,7 +3653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
-      <i class="fa-solid fa-copy fa-fw"></i>
+      <i class="fa-solid fa-copy red fa-fw"></i>
       复制文本
     </span>
   </li>
@@ -3690,7 +3662,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
+      <i class="fa-solid fa-search yellow fa-fw"></i>
       站内搜索
     </span>
   </li>
@@ -3699,7 +3671,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
+      <i class="fa-solid fa-search green fa-fw"></i>
       必应搜索
     </span>
   </li>
@@ -3708,7 +3680,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
-      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      <i class="fa-solid fa-external-link-square-alt accent fa-fw"></i>
       新标签页打开
     </span>
   </li>
@@ -3717,7 +3689,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
-      <i class="fa-solid fa-link fa-fw"></i>
+      <i class="fa-solid fa-link theme fa-fw"></i>
       复制链接地址
     </span>
   </li>
@@ -3726,7 +3698,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
-      <i class="fa-solid fa-image fa-fw"></i>
+      <i class="fa-solid fa-image accent fa-fw"></i>
       复制图片
     </span>
   </li>
@@ -3735,7 +3707,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
-      <i class="fa-solid fa-images fa-fw"></i>
+      <i class="fa-solid fa-images theme fa-fw"></i>
       谷歌识图
     </span>
   </li>
@@ -3743,39 +3715,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
-      <i class="fa-solid fa-question fa-fw"></i>
-      常见问题
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
-      <i class="fa-solid fa-rss fa-fw"></i>
-      示例博客
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
-      <i class="fa-solid fa-fan fa-fw"></i>
-      加入社区
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
+      <i class="fa-solid fa-code-branch orange fa-fw"></i>
       本站源码
     </a>
   </li>
@@ -3784,7 +3725,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
+      <i class="fa-solid fa-code-branch yellow fa-fw"></i>
       主题源码
     </a>
   </li>
@@ -3797,7 +3738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
-      <i class="fa-solid fa-moon fa-fw"></i>
+      <i class="fa-solid fa-moon yellow fa-fw"></i>
       暗黑模式
     </span>
   </li>
@@ -3806,7 +3747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
-      <i class="fa-solid fa-print fa-fw"></i>
+      <i class="fa-solid fa-print green fa-fw"></i>
       打印页面
     </span>
   </li>
@@ -3815,7 +3756,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
-      <i class="fa-solid fa-book-open fa-fw"></i>
+      <i class="fa-solid fa-book-open red fa-fw"></i>
       阅读模式
     </span>
   </li>
@@ -3922,14 +3863,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-
 
 
 
@@ -4370,7 +4303,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4597,7 +4530,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","sameAs":["https://github.com/volantis-x"],"description":"学 whk 学累了就来这里睡一会~"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yh2021shx.github.com/","name":"yh2021shx's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yh2021shx.github.com/categories/Solutions/","name":"Solutions"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yh2021shx.github.com/2023/06/29/ABC302G/","name":"ABC302 G 题题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","keywords":null,"description":"学 whk 学累了就来这里睡一会~","author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","description":"学 whk 学累了就来这里睡一会~"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yh2021shx.github.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ABC302 G 题题解","description":"\n\n\n 1 题目大意\n1.1 题目翻译\n有两个人轮流取物品。总共有 nnn 个物品，第 iii 个物品的价值为 wiw_iwi​。\n他们按照下面的其中一种方式取物品：\n\n\n取出这一排物品最前面的或者最后面的。这一步没有代价。\n\n\n设还剩下 mmm 个物品，那么重复取出 min⁡(B,m)\\min(B, m)min(B,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 AAA。\n\n\n设还剩下 mmm 个物品，那么重复取出 min⁡(D,m)\\min(D, m)min(D,m) 个物品，每次取出最前面的或者最后面的。这一步的代价为 CCC。\n\n\n最后一个人取出物品的价值为所有他取出物品价值之和减去他所花费的代价。问当两人均以最优策略取物品时，先手取出物品的价值减去后手取出物品的价值为多少。","inLanguage":["zh-Hans","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://yh2021shx.github.com/2023/06/29/ABC302G/"},"author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yh2021shx.github.com/2023/06/29/ABC302G/","wordCount":352,"datePublished":"2023-06-29T10:52:45.240Z","dateModified":"2023-10-25T11:38:29.904Z","articleSection":"Solutions","keywords":"ABC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","sameAs":["https://github.com/volantis-x"],"description":"学 whk 学累了就来这里睡一会~"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yh2021shx.github.com/","name":"yh2021shx's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yh2021shx.github.com/categories/Solutions/","name":"Solutions"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yh2021shx.github.com/2023/06/29/ABC302G/","name":"ABC302 G 题题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","keywords":null,"description":"学 whk 学累了就来这里睡一会~","author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/","description":"学 whk 学累了就来这里睡一会~"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","url":"https://yh2021shx.github.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yh2021shx.github.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ABC302 G 题题解","description":"学 whk 学累了就来这里睡一会~","inLanguage":["zh-Hans","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://yh2021shx.github.com/2023/06/29/ABC302G/"},"author":{"@type":"Person","name":"yh2021shx","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yh2021shx.github.com/"},"publisher":{"@type":"Organization","name":"yh2021shx's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yh2021shx.github.com/2023/06/29/ABC302G/","wordCount":0,"datePublished":"2023-06-29T10:52:45.240Z","dateModified":"2023-11-10T10:45:32.792Z","articleSection":"Solutions","keywords":"ABC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -4679,7 +4612,8 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- import body_end begin-->
     <!-- import body_end end-->
     <!-- Custom Files bodyEnd begin-->
-    
+    <script type="text/javascript" color="220,220,220" opacity='0.7' zIndex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
     <!-- Custom Files bodyEnd end-->
     <!-- front-matter body_end begin -->
     <!-- front-matter body_end end -->

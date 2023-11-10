@@ -47,7 +47,7 @@
   -webkit-border-radius: 2px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #c618c8;
 }
 html {
   color: var(--color-text);
@@ -93,7 +93,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #99c84e;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -104,7 +104,7 @@ a {
   -ms-transition: all 0.28s ease;
 }
 a:hover {
-  color: #ff5722;
+  color: #c618c8;
 }
 a:active,
 a:hover {
@@ -672,7 +672,7 @@ button {
     -webkit-border-radius: 0;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
+    background: #c618c8;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
