@@ -25,17 +25,17 @@
   <!-- Custom Files headBegin begin-->
   <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
 
+<script defer src="https://unpkg.com/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 <script defer src="/custom/darkmode.js"></script>
 <script defer src="/custom/subtitle_change.js"></script>
-<script defer src="/custom/title.js"></script>
-<script defer src="https://unpkg.com/katex@0.16.4/dist/katex.min.js"></script>
-<script defer src="https://unpkg.com/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<script defer src="/custom/title.js"></script>>
 <link rel="stylesheet" href="/custom/darkmode.css" type="text/css"/>
-<link rel="stylesheet" href="https://unpkg.com/katex@0.16.4/dist/katex.min.css">
+<link rel="stylesheet" href="https://unpkg.com/katex@0.16.9/dist/katex.min.css">
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script defer type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script defer type="text/javascript" src="/custom/fireworks.js"></script>
-<script defer type="text/javascript" src="\custom\snow.js"></script>
+<script defer type="text/javascript" src="/custom/snow.js"></script>
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
@@ -1886,9 +1886,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1699667281103),
+    lastupdate: new Date(1699703873856),
     sidebar: {
-      for_page: ["feedback","blogger","category","tagcloud","donate","webinfo","music"],
+      for_page: ["text","feedback","blogger","category","tagcloud","donate","webinfo","music"],
       for_post: ["webinfo","music","toc"],
       webinfo: {
         lastupd: {
@@ -3037,6 +3037,83 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+<section class="widget page desktop mobile pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-bullhorn AMETHYST fa-fw" aria-hidden="true"></i><span class='name'>小 Tips</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      
+        <article id="page" class="post article-type-page" itemscope itemprop="blogPost">
+          <section class="article typo">
+            <div class="article-entry" itemprop="articleBody">
+              
+                <p>本站默认替换了右键菜单，唤醒原系统菜单： <kbd>ctrl</kbd> + <kbd>右键</kbd>。</p>
+
+              
+            </div>
+          </section>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
 <section class="widget grid desktop mobile pjax">
   
   <header>
@@ -3067,6 +3144,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <i class="fa-solid fa-book TURQUOISE fa-fw" aria-hidden="true"></i>
           
           OI 专区
+        </a>
+      
+        <a class="flat-box" href="/Target/"
+          
+          
+          active-action="action-Target">
+          
+            <i class="fa-solid fa-paper-plane green fa-fw" aria-hidden="true"></i>
+          
+          小目标
         </a>
       
     </div>
@@ -3246,7 +3333,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>10 篇</div>
+          <div>11 篇</div>
         </div>
       
 
@@ -4079,29 +4166,52 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-      <script type="text/javascript">
-  volantis.layoutHelper("comments",`<div id="gitalk-container"></div>`)
-  function pjax_gitalk() {
-    if(!document.querySelector("#gitalk-container"))return;
-    let path = pdata.commentPath;
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
     }
-    if (document.getElementById('gitalk-container') != null) {
-      var gitalk = new Gitalk(
-        Object.assign(
-          Object.assign({"js":"https://unpkg.com/gitalk@1/dist/gitalk.min.js","clientID":"b3308db46a55496c076c","clientSecret":"1675737afb2537225c142b731ec0de8a53345fd6","repo":"yh2021shx.github.io","owner":"yh2021shx","admin":"yh2021shx","path":null}, {
-            id: path,
-            distractionFreeMode: false  // Facebook-like distraction free mode
-          }),
-        pdata.commentConfig)
-      );
-      gitalk.render('gitalk-container');
-    }
+
+    return document.getElementById("giscus_container");
   }
-  volantis.js('https://unpkg.com/gitalk@1/dist/gitalk.min.js').then(pjax_gitalk)
-  volantis.pjax.push(pjax_gitalk);
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"yh2021shx/yh2021shx.github.io","repo-id":"R_kgDOJ1I5Mg","category":"Announcements","category-id":"DIC_kwDOJ1I5Ms4Ca3mq","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
 </script>
 
     
@@ -4210,7 +4320,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp"];
   let index = 0;
   let IntervalParallax = null;
 
