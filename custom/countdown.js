@@ -1,10 +1,11 @@
 // 设置变量（不同的时间传入方式）
-var target_time = new Date("2023/11/19");
+var target_time = new Date("2024/11/19");
 // var target_time = new Date();
 // target_time.setHours(target_time.getHours() + 5);
 
 // 获取需要对应插入数据的节点
 // var target_time = new Date(document.getElementById("target").value);
+var day_ele = document.getElementById("day");
 var hour_ele = document.getElementById("hour");
 var min_ele = document.getElementById("min");
 var sec_ele = document.getElementById("sec");
@@ -13,7 +14,8 @@ var sec_ele = document.getElementById("sec");
 function countDown(){
     var reduce_ms = target_time.getTime() - Date.now(); 
     return {
-        hour : parseInt(reduce_ms / 1000 / 3600),
+        day : parseInt(reduce_ms / 1000 / 3600 / 24),
+        hour : parseInt(reduce_ms / 1000 / 3600 % 24),
         min  : parseInt(reduce_ms / 1000 / 60 % 60 ),
         sec  : Math.round(reduce_ms / 1000 % 60)
     }
@@ -22,6 +24,7 @@ function countDown(){
 // 将数据渲染到页面指定节点中
 function renderCountDown(){
     var res = countDown();
+    day_ele.innerHTML = addZero(res.day);
     hour_ele.innerHTML = addZero(res.hour);
     min_ele.innerHTML  = addZero(res.min);
     sec_ele.innerHTML  = addZero(res.sec);
